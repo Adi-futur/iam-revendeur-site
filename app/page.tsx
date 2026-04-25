@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { t, type Lang } from '@/lib/i18n'
 
 // ── Fibre sub-offers ──────────────────────────────────────────────────────────
@@ -308,6 +309,15 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-white font-bold text-lg mb-1">Netgear</div>
           <div className="text-[#E30613] text-sm font-semibold mb-4">{T.nav_tagline}</div>
+          <div className="flex items-center justify-center gap-4 mb-4 text-xs">
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              {isAr ? 'سياسة الخصوصية' : 'Politique de confidentialité'}
+            </Link>
+            <span>·</span>
+            <Link href="/terms" className="hover:text-white transition-colors">
+              {isAr ? 'الشروط والأحكام' : "Conditions d'utilisation"}
+            </Link>
+          </div>
           <p className="text-xs">© {new Date().getFullYear()} Netgear — Distributeur Agréé Maroc Telecom. Tous droits réservés.</p>
         </div>
       </footer>
