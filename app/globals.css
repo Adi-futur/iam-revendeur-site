@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+[dir="rtl"] { font-family: 'Noto Sans Arabic', Arial, sans-serif; }
+
+.offer-card:hover { transform: translateY(-4px); }
+.offer-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
