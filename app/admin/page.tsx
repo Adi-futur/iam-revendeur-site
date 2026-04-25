@@ -226,10 +226,18 @@ export default function AdminPage() {
               </button>
             </div>
             <img src={photoModal.url} alt={photoModal.label} className="w-full object-contain max-h-[70vh]" />
-            <div className="px-5 py-3 border-t border-gray-100">
+            <div className="px-5 py-3 border-t border-gray-100 flex items-center gap-4">
               <a href={photoModal.url} target="_blank" rel="noopener noreferrer"
                 className="text-sm text-[#E30613] hover:underline font-medium">
                 Ouvrir en plein écran →
+              </a>
+              <a href={photoModal.url} download={photoModal.label + '.jpg'}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium text-gray-700 transition-colors">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Télécharger
               </a>
             </div>
           </div>
