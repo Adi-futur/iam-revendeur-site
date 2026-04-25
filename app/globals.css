@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* { box-sizing: border-box; }
+* { box-sizing: border-div; }
 
+body { font-family: 'Inter', sans-serif; }
 [dir="rtl"] { font-family: 'Noto Sans Arabic', Arial, sans-serif; }
 
+.offer-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
 .offer-card:hover { transform: translateY(-4px); }
-.offer-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+
+.fibre-sub-card { transition: all 0.15s ease; }
+.fibre-sub-card:hover { transform: translateY(-2px); }
